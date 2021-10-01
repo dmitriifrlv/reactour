@@ -70,6 +70,7 @@ The [Playground](../playground) is the perfect place to play aroud with all `@re
 - [Using React Modal](https://codesandbox.io/s/reactour-tour-demo-using-react-modal-8v0eo)
 - [Using Semantic UI Modal](https://codesandbox.io/s/reactour-tour-demo-using-semantic-ui-modal-xmqee)
 - [Using React Bootstrap Modal](https://codesandbox.io/s/reactour-tour-demo-using-react-bootstrap-modal-qjws4)
+- [Tour with data fetching](https://codesandbox.io/s/tour-with-data-fetching-dv2q0?file=/src/index.js)
 
 [![Edit @reactour/tour Demo Template](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/reactour-tour-demo-template-fglzv?fontsize=14&hidenavigation=1&theme=dark)
 
@@ -160,7 +161,7 @@ Refer to [Mask docs](../mask/README.md) and [Popover docs](../popover/README.md)
 
 ```js
 const styles = {
-  maskWrapper: base => ({
+  maskWrapper: (base) => ({
     ...base,
     color: 'red',
   }),
@@ -169,7 +170,7 @@ const styles = {
     x: x + 10,
     y: y + 10,
   }),
-  badge: base => ({ ...base, color: 'blue' }),
+  badge: (base) => ({ ...base, color: 'blue' }),
 }
 ```
 
@@ -330,7 +331,7 @@ Click handler for highlighted area. Only works when `disableInteraction` is acti
 <TourProvider
   steps={steps}
   disableInteraction
-  onClickHighlighted={e => {
+  onClickHighlighted={(e) => {
     e.stopPropagation()
     console.log('No interaction at all')
   }}
